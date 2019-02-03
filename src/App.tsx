@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Home } from './modules/home/Home';
+import { Provider } from 'react-redux';
+import { HomeContainer } from './modules/home/HomeContainer';
+import { store } from './store';
 
 export class App extends Component {
   render() {
-    return <Home />;
+    return (
+      <Provider store={store}>
+        <HomeContainer />;
+      </Provider>
+    );
   }
 }
