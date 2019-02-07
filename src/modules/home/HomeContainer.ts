@@ -10,7 +10,10 @@ const mapState = (state: AppState) => {
 const mapDispatch = (dispach: Dispatch) => {
   return {
     setX(x: string) {
-      return dispach(homeAggregate.creators.setX(x));
+      dispach(homeAggregate.creators.setX(x));
+    },
+    init() {
+      dispach(homeAggregate.creators.init());
     },
   };
 };

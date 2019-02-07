@@ -5,7 +5,7 @@ import { HomeProps } from './HomeContainer';
 
 export class Home extends Component<HomeProps> {
   componentDidMount() {
-    setTimeout(() => this.props.setX('hoge'), 1000);
+    this.props.init();
   }
   render() {
     return (
@@ -23,6 +23,7 @@ export class Home extends Component<HomeProps> {
           >
             Learn React
           </a>
+          <button onClick={() => this.props.setX('X!')}>set x!</button>
         </header>
       </div>
     );
