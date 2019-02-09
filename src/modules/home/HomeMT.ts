@@ -1,4 +1,4 @@
-import { createAggregate } from 'redux-aggregate';
+import { createAggregate } from '@sisisin/redux-aggregate';
 import { AnyAction } from 'redux';
 import { AppState } from '../../store';
 import { Epic, ofType } from 'redux-observable';

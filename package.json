@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sisisin/redux-aggregate": "^2.2.0",
     "@types/jest": "23.3.13",
     "@types/node": "10.12.21",
     "@types/react": "16.8.1",
@@ -13,7 +14,6 @@
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.3",
     "redux": "^4.0.1",
-    "redux-aggregate": "sisisin/redux-aggregate#updated-lib",
     "redux-observable": "^1.0.0",
     "typescript": "3.3.1"
   },
