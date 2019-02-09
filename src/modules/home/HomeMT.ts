@@ -1,6 +1,6 @@
 import { createAggregate } from '@sisisin/redux-aggregate';
 import { AnyAction } from 'redux';
-import { AppState } from '../../store';
+import { AppState } from '../../App';
 import { Epic, ofType } from 'redux-observable';
 import { mergeMap, map } from 'rxjs/operators';
 import { httpClient } from '../../services/HttpClient';

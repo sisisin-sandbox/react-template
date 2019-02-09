@@ -1,4 +1,9 @@
-import { ReactStateDeclaration, UIRouterReact } from '@uirouter/react';
+import {
+  ReactStateDeclaration,
+  UIRouterReact,
+  servicesPlugin,
+  pushStateLocationPlugin,
+} from '@uirouter/react';
 import { AnyAction, Store } from 'redux';
 import { AppState } from './App';
 import { HomeContainer } from './modules/home/HomeContainer';
@@ -15,6 +20,12 @@ export function createRouterStates(store: Store<AppState, AnyAction>): ReactStat
 }
 
 export function setupRouter(store: Store<AppState, AnyAction>, router: UIRouterReact) {
+  // initialize router
+  router.plugin(servicesPlugin);
+  router.plugin(pushStateLocationPlugin);
+  createRouterStates(store).forEach(s => router.stateRegistry.register(s));
+
+  // application behavior
   router.urlRouter.otherwise('/404');
 
   router.transitionService.onBefore(

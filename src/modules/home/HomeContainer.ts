@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { AppState } from '../../store';
+import { AppState } from '../../App';
 import { Home } from './Home';
 import { homeAggregate } from './HomeMT';
 
