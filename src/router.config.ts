@@ -1,12 +1,13 @@
 import {
-  ReactStateDeclaration,
-  UIRouterReact,
-  servicesPlugin,
   pushStateLocationPlugin,
+  ReactStateDeclaration,
+  servicesPlugin,
+  UIRouterReact,
 } from '@uirouter/react';
 import { AnyAction, Store } from 'redux';
 import { AppState } from './App';
 import { HomeContainer } from './modules/home/HomeContainer';
+import { LoginContainer } from './modules/login/LoginContainer';
 
 export function createRouterStates(store: Store<AppState, AnyAction>): ReactStateDeclaration[] {
   return [
@@ -15,6 +16,12 @@ export function createRouterStates(store: Store<AppState, AnyAction>): ReactStat
       url: '/home',
       component: HomeContainer,
       data: { requiresAuth: true },
+    },
+    {
+      name: 'login',
+      url: '/login',
+      component: LoginContainer,
+      data: { requiresAuth: false },
     },
   ];
 }
