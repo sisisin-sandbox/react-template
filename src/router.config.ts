@@ -7,6 +7,7 @@ import {
 import { AnyAction, Store } from 'redux';
 import { AppState } from './App';
 import { HomeContainer } from './modules/home/HomeContainer';
+import { FormContainer } from './modules/form/FormContainer';
 
 export function createRouterStates(store: Store<AppState, AnyAction>): ReactStateDeclaration[] {
   return [
@@ -14,6 +15,12 @@ export function createRouterStates(store: Store<AppState, AnyAction>): ReactStat
       name: 'home',
       url: '/home',
       component: HomeContainer,
+      data: { requiresAuth: true },
+    },
+    {
+      name: 'form',
+      url: '/form',
+      component: FormContainer,
       data: { requiresAuth: true },
     },
   ];
