@@ -19,7 +19,8 @@ export const Form: React.FC<FormProps> = props => {
         onChange={e => handleOnChange(e.target.value, 'userName')}
       />
       <br />
-      <input type="button" value="submit" onClick={props.submit} />
+
+      <input type="button" value="hogeddd" onClick={props.submit} />
     </form>
   );
 };
